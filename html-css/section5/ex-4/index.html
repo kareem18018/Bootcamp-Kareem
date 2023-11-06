@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px; /* Fixed width for the sidebar */
+            background-color:gray;
+            color: #fff;
+            padding: 5px;
+        }
+
+        .content {
+            flex: 1; /* Takes up the remaining space */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Content Area</h2>
+            <p>This is the content area that takes up the remaining space.</p>
+        </div>
+    </div>
+</body>
+</html>

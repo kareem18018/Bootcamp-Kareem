@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .login-form {
+            width: 300px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.column {
+    float: left;
+    width: 32%;
+}
+
+.left-column {
+    margin-right: 20px;
+}
+
+.middle-column {
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+
+

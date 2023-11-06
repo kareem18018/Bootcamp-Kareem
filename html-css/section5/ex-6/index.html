@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between images */
+        }
+
+        .image {
+            flex: 1; /* Each image takes an equal portion of the available width */
+            max-width: calc(33.33% - 10px); /* 33.33% width with 10px gap on each side */
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="Sehwag.jpg" alt="Image 1">
+        </div>
+        <div class="image">
+            <img src="Dhoni.png" alt="Image 2">
+        </div>
+        <div class="image">
+            <img src="cat.jpeg" alt="Image 3">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+</body>
+</html>
