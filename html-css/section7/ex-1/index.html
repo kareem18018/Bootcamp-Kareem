@@ -1,0 +1,217 @@
+<html>
+<head>
+  <style>
+    /* Use a media query to make the layout responsive */
+@media (max-width:768px){
+.sidebar{
+    display:none;
+}
+
+.gallery-item{
+    grid-template-columns: repeat(2,1fr);
+}
+.nav-links{
+    display: none;
+}
+.nav-link{
+    display: none;
+}
+
+}
+
+
+
+
+    /* Use flexbox to create a layout with a sidebar and a main section */
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 20%;
+      background-color:lightgray;
+      padding: 20px;
+    }
+    .main {
+
+      padding: 20px;
+    }
+
+    /* Style the navigation menu */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: lightblue;
+      padding: 10px;
+    }
+    .nav-logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .nav-link {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Style the hamburger menu */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+    }
+
+    /* Style the sidebar filters */
+    .filter {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .filter-label {
+      margin-left: 10px;
+    }
+
+    /* Style the gallery of products */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .gallery-item {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .product-name {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .product-price {
+      color: green;
+    }
+
+    /* Style the footer */
+    .footer {
+      background-color: darkgray;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Create a header with a navigation menu -->
+  <header class="nav">
+    <div class="nav-logo">SHOCKER SHOE POINT</div>
+    <ul class="nav-links">
+      <li><a class="nav-link" href="#">Home</a></li>
+      <li><a class="nav-link" href="#">About</a></li>
+      <li><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+    <!-- Create a hamburger menu for smaller devices -->
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+  <!-- Create a container for the sidebar and the main section -->
+  <div class="container">
+    <!-- Create a sidebar with checkboxes as filters -->
+    <div class="sidebar">
+      <h3>Filters</h3>
+      <div class="filter">
+        <input type="checkbox" id="men" name="men">
+        <label class="filter-label" for="men">Men</label>
+      </div>
+      <div class="filter">
+        <input type="checkbox" id="women" name="women">
+        <label class="filter-label" for="women">Women</label>
+      </div>
+      <div class="filter">
+        <input type="checkbox" id="kids" name="kids">
+        <label class="filter-label" for="kids">Kids</label>
+      </div>
+      <div class="filter">
+        <input type="checkbox" id="sports" name="sports">
+        <label class="filter-label" for="sports">Sports</label>
+      </div>
+      <div class="filter">
+        <input type="checkbox" id="casual" name="casual">
+        <label class="filter-label" for="casual">Casual</label>
+      </div>
+      <div class="filter">
+        <input type="checkbox" id="formal" name="formal">
+        <label class="filter-label" for="formal">Formal</label>
+      </div>
+    </div>
+    <!-- Create a main section that shows a gallery of products -->
+    <div class="main">
+      <h1>Shoes for Everyone</h1>
+      <p>Find your perfect pair of shoes at our online store. We have a wide range of styles, sizes, and colors to suit your needs. Whether you are looking for sports shoes, casual shoes, or formal shoes, we have it all. Browse our collection and order today.</p>
+      <div class="gallery">
+        <!-- Create a gallery item for each product -->
+        <div class="gallery-item">
+          <img class="product-image" src="nike.jpg" alt="Shoe 1">
+          <div class="product-name">Nike Air Max</div>
+          <div class="product-price">$120</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="adidus.avif" alt="Shoe 2">
+          <div class="product-name">Adidas Superstar</div>
+          <div class="product-price">$80</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="reebok.avif" alt="Shoe 3">
+          <div class="product-name">Reebok Classic</div>
+          <div class="product-price">$60</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="6324757.jpg" alt="Shoe 4">
+          <div class="product-name">Puma Suede</div>
+          <div class="product-price">$70</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="converse.avif" alt="Shoe 5">
+          <div class="product-name">Converse All Star</div>
+          <div class="product-price">$50</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="vans.avif" alt="Shoe 6">
+          <div class="product-name">Vans Old Skool</div>
+          <div class="product-price">$65</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="new balance.jpg" alt="Shoe 7">
+          <div class="product-name">New Balance 574</div>
+          <div class="product-price">$75</div>
+        </div>
+        <div class="gallery-item">
+          <img class="product-image" src="ascias.jpg" alt="Shoe 8">
+          <div class="product-name">Asics Gel Lyte</div>
+          <div class="product-price">$90</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Create a footer with some information -->
+  <footer class="footer">
+    <p>© 2023 Shoe Shop. All rights reserved.</p>
+    <p>Follow us on social media:</p>
+    <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+  </footer>
+</body>
+</html>

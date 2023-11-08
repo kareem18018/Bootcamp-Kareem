@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Comparison Table</title>
+  <style>
+/* Define a grid container with three columns and four rows */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Style the header cells */
+.grid-header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style the price cells */
+.grid-price {
+  background-color: #eee;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style the feature cells */
+.grid-feature {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style the button cells */
+.grid-button {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style the buttons */
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Add some hover effects */
+.grid-container:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.button:hover {
+  background-color: #02a55a;
+}
+
+  </style>
+</head>
+<body>
+ <!-- Define the grid items with the corresponding class names -->
+<div class="grid-container">
+    <div class="grid-header">Basic</div>
+    <div class="grid-header">Pro</div>
+    <div class="grid-header">Premium</div>
+    <div class="grid-price">$9.99 / month</div>
+    <div class="grid-price">$24.99 / month</div>
+    <div class="grid-price">$49.99 / month</div>
+    <div class="grid-feature">10GB Storage</div>
+    <div class="grid-feature">25GB Storage</div>
+    <div class="grid-feature">50GB Storage</div>
+    <div class="grid-feature">300 meassages per month</div>
+    <div class="grid-feature">1000 meassages per month</div>
+    <div class="grid-feature">Unlimited meassages per month</div>
+    <div class="grid-button"><a href="#" class="button">Recharge Now</a></div>
+    <div class="grid-button"><a href="#" class="button"> Recharge Now</a></div>
+    <div class="grid-button"><a href="#" class="button"> Recharge Now</a></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine-grid layout</title>
+    <style>
+.container{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap: 20px;
+padding: 20px;}
+.article{
+text-align: center;
+border: 1px solid black;
+padding: 20px;
+background-color:white;
+}
+.article img{
+width: 100%;
+height: 100%;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="article">
+<img src="vk.jpeg"alt="Virat">
+<h5>Virat Kohli</h5>
+<p>Virat Kohli is an Indian international cricketer and the former captain of the Indian national cricket team</p>
+</div>
+
+<div class="article">
+    <img src="novak.jpeg"alt="tennis">
+    <h5>Novak Djokovic</h5>
+    <p>Novak Djokovic is a Serbian professional tennis player who is currently ranked world No. 1 in singles by the Association of Tennis Professionals (ATP).</p>
+    </div>
+
+    <div class="article">
+        <img src="messi.jpeg"alt="messi">
+        <h5>Lionel Messi</h5>
+        <p>Lionel Andrés Messi also known as Leo Messi, is an Argentine professional footballer who plays as a forward for and captains both Major League Soccer club</p>
+        </div>
+</div>
+</body>
+</html>
