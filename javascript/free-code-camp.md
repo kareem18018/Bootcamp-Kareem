@@ -1,0 +1,6 @@
+![OOPS](6.png)
+![Basic Algorithm Scripting](5.png)
+![Debugging](4.png)
+![Regular Expressions](3.png)
+![ES6](2.png)
+![Basic Javascript](1.png)
