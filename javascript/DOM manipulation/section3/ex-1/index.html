@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Text Resizer</title>
+    <style>
+        #textContainer {
+            font-size: 16px;
+            margin: 20px;
+            transition: font-size 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <label for="fontSizeSlider">Adjust Font Size:</label>
+        <input type="range" id="fontSizeSlider" min="10" max="100" step="1" value="16">
+        <span id="currentFontSize">16px</span>
+    </div>
+
+    <div id="textContainer">
+        <p>
+            This is a sample text paragraph. You can use the slider above to adjust the font size dynamically.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var fontSizeSlider = document.getElementById('fontSizeSlider');
+            var currentFontSizeSpan = document.getElementById('currentFontSize');
+            var textContainer = document.getElementById('textContainer');
+
+            currentFontSizeSpan.textContent = fontSizeSlider.value + 'px';
+
+            fontSizeSlider.addEventListener('input', function() {
+                var newSize = fontSizeSlider.value;
+                textContainer.style.fontSize = newSize + 'px';
+                currentFontSizeSpan.textContent = newSize + 'px';
+            });
+        });
+    </script>
+
+</body>
+</html>

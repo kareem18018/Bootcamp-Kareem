@@ -1,0 +1,28 @@
+:root {
+    --light-bg: #f2f2f2;
+    --light-text: #333;
+    --dark-bg: #222;
+    --dark-text: #fff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+#container {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}

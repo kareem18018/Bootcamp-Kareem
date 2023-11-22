@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Paragraphs</title>
+</head>
+<body>
+    <button id="btnAdd">Add Paragraph</button>
+    <div id="paragraphContainer"></div>
+
+    <script>document.getElementById('btnAdd').addEventListener('click', function() {
+        var paragraph = document.createElement('p');
+        paragraph.textContent = 'This is a new paragraph.';
+        document.getElementById('paragraphContainer').appendChild(paragraph);
+    });</script>
+</body>
+</html>

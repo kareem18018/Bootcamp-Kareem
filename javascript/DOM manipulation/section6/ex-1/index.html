@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Grid with Color Coding</title>
+    <style>
+        #container {
+            display: flex;
+            flex-wrap:wrap;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #container div {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+        }
+
+        .even {
+            background-color: green;
+        }
+
+        .odd {
+            background-color: yellow;
+        }
+
+        .prime {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        for (let i = 100; i <= 1000; i++) {
+            let numberElement = document.createElement('div');
+            numberElement.textContent = i;
+
+            if (i % 2 === 0) {
+                numberElement.classList.add('even');
+            } else {
+                numberElement.classList.add('odd');
+            }
+
+            if (isPrime(i)) {
+                numberElement.classList.add('prime');
+            }
+
+            document.getElementById('container').appendChild(numberElement);
+        }
+    </script>
+</body>
+</html>

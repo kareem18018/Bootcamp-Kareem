@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time List Filter</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchBox" onkeyup="filterList()" placeholder="Search for names..">
+
+    <ul id="nameList">
+        <li>John cena</li>
+        <li>Roman Regins</li>
+        <li>The Rock</li>
+        <li>Broke Lasner</li>
+        <li>HHH</li>
+        <li>Rey Mastrio</li>
+        <li>Undertiger</li>
+        <li>Randy Orton</li>
+        <li>Shane Michael</li>
+        <li>The Miz</li>
+        <li>Jeff Hardy</li>
+        <li>Goldberg</li>
+        <li>Batista</li>
+        <li>Kane</li>
+        <li>Chris Jeriko</li>
+        <li>Seth Rollins</li>
+        <li>CM punk</li>
+        <li>Edge</li>
+        <li>Bobby Lashley</li>
+        <li>Rusev</li>
+        <li>Dean Ambrose</li>
+        <li>DOg Zegler</li>
+        <li>Ryback</li>
+        <li>Nakamora</li>
+        <li>Great khale</li>
+    </ul>
+
+    <script>
+        function filterList() {
+            let input = document.getElementById('searchBox');
+            let filter = input.value.toUpperCase();
+            let ul = document.getElementById('nameList');
+            let li = ul.getElementsByTagName('li');
+
+            for (let i = 0; i < li.length; i++) {
+                let txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

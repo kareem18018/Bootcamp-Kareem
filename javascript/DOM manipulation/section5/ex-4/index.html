@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 150vh; /* Make the body taller to enable scrolling */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #f0f0f0;
+            z-index: 1000;
+            display: none; /* Initially hide the progress bar */
+        }
+
+        #progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+<p>Visakhapatnam is a port city and industrial center in the Indian state of Andhra Pradesh, on the Bay of Bengal. It's known for its many beaches, including Ramakrishna Beach, home to a preserved submarine at the Kursura Submarine Museum. Nearby are the elaborate Kali Temple and the Visakha Museum, an old Dutch bungalow housing local maritime and historical exhibits. </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var progressBar = document.getElementById("progress-bar");
+            var progressContainer = document.getElementById("progress-container");
+
+            function updateProgressBar() {
+                var scrollPosition = window.scrollY;
+                var windowHeight = window.innerHeight;
+                var bodyHeight = document.body.scrollHeight;
+
+                var progress = (scrollPosition / (bodyHeight - windowHeight)) * 100;
+                progressBar.style.width = progress + "%";
+            }
+
+            function showHideProgressBar() {
+                var scrollPosition = window.scrollY;
+                var windowHeight = window.innerHeight;
+                var bodyHeight = document.body.scrollHeight;
+
+                if (scrollPosition > 0) {
+                    progressContainer.style.display = "block";
+                } else {
+                    progressContainer.style.display = "none";
+                }
+
+                if (scrollPosition + windowHeight >= bodyHeight) {
+                    progressContainer.style.display = "none";
+                }
+            }
+
+            window.addEventListener("scroll", function () {
+                updateProgressBar();
+                showHideProgressBar();
+            });
+
+            window.addEventListener("resize", function () {
+                updateProgressBar();
+            });
+        });
+    </script>
+</body>
+</html>

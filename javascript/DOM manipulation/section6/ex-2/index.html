@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Grid Display</title>
+   <style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .country-card {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .country-name {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 8px;
+        color: #333;
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- Replace the following array with your list of countries -->
+    <script>
+            const countries = ["Germany", "France", "Spain", "Italy", "United Kingdom","Newzeland","South Africa","UAE","Afganisthan","England"]
+
+        // Function to create and append country cards to the body
+        function createCountryCards() {
+            const body = document.body;
+
+            countries.forEach(country => {
+                const countryCard = document.createElement('div');
+                countryCard.className = 'country-card';
+                countryCard.textContent = country;
+                body.appendChild(countryCard);
+            });
+        }
+
+        // Call the function to create country cards
+        createCountryCards();
+    </script>
+
+</body>
+</html>

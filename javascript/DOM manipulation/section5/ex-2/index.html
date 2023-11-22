@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Image Gallery</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#main-image {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 2px solid #ddd; /* Add border to the main image */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+#thumbnails {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 0.7;
+  border-color: #007bff;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Interactive Image Gallery</h1>
+
+  <img id="main-image" src="photo4.jpg" alt="Main Image">
+
+  <div id="thumbnails">
+    <img class="thumbnail" src="photo8.jpg" alt="Image 1" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo6.jpg" alt="Image 2" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo7.jpg" alt="Image 3" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo5.jpg" alt="Image 3" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo4.jpg" alt="Image 3" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo3.jpg" alt="Image 3" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo2.jpg" alt="Image 3" onclick="changeImage(event)">
+    <img class="thumbnail" src="photo1.jpg" alt="Image 3" onclick="changeImage(event)">
+
+  </div>
+
+  <script>
+    function changeImage(event) {
+      const newImageSrc = event.target.src;
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = newImageSrc;
+
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      thumbnails.forEach(thumbnail => {
+        thumbnail.classList.remove('active');
+      });
+
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

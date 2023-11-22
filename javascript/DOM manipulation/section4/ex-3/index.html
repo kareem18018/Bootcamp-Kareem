@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea Character Counter</title>
+    <style>
+        .counter {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="myTextarea" rows="4" cols="50"></textarea>
+    <p class="counter" id="myCounter"></p>
+
+    <script>
+        var textarea = document.getElementById('myTextarea');
+        var counter = document.getElementById('myCounter');
+
+        textarea.addEventListener('input', function () {
+            var currentLength = textarea.value.length;
+            counter.textContent = 'Characters: ' + currentLength;
+        });
+    </script>
+</body>
+</html>

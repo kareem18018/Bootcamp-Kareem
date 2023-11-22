@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #ddd;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-bottom: 1px solid #ddd;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Collapsible Section 1 -->
+<button class="collapsible">Section 1</button>
+<div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+</div>
+
+<!-- Collapsible Section 2 -->
+<button class="collapsible">Section 2</button>
+<div class="content">
+    <p>Curabitur ante elit, euismod in sollicitudin in, dictum non turpis. Nulla facilisi.</p>
+</div>
+
+<!-- Collapsible Section 3 -->
+<button class="collapsible">Section 3</button>
+<div class="content">
+    <p>Nunc accumsan, risus sed viverra ullamcorper, tortor nisi hendrerit risus.</p>
+</div>
+
+<script>
+    document.querySelectorAll('.collapsible').forEach(function (button) {
+        button.addEventListener('click', function () {
+            this.classList.toggle('active');
+
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Implementation</title>
+<style>
+/* Hide the modal by default */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Style the modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+/* Style the modal title */
+.modal-title {
+    font-size: 20px;
+}
+
+/* Style the close button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Style the modal footer */
+.modal-footer {
+    text-align: right;
+    padding-top: 10px;
+}
+
+/* Style the close button in the footer */
+.modal-close {
+    padding: 5px 10px;
+    border: 1px solid #888;
+    cursor: pointer;
+}
+#open-modal{
+background-color: gray;
+}
+</style>
+</head>
+<body>
+    <button id="open-modal">Open Modal</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modal Title</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>This is the modal content.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>const openModalButton = document.getElementById('open-modal');
+        const modal = document.getElementById('modal');
+        const closeModalButton = document.querySelector('.modal-close');
+        const closeSpan = document.querySelector('.close');
+
+        openModalButton.addEventListener('click', openModal);
+        closeModalButton.addEventListener('click', closeModal);
+        closeSpan.addEventListener('click', closeModal);
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        </script>
+</body>
+</html>
